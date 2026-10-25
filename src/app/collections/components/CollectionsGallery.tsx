@@ -28,11 +28,12 @@ const CollectionsGallery = ({
         </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {/* {loading && <div className="text-white">Please wait...</div>} */}
           {error && <div className="text-red-500">{error}</div>}
           {loading
             ? 'please wait...'
-            : photos.map((photo) => <PhotoCard key={photo.id} {...photo} />)}
+            : photos.length > 0
+              ? photos.map((photo) => <PhotoCard key={photo.id} {...photo} />)
+              : 'Collections not Found'}
         </div>
       </div>
     </section>
