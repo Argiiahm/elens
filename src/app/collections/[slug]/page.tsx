@@ -15,8 +15,4 @@ const CollectionDetailPage = async ({ params }: CollectionDetailPageProps) => {
   return <CollectionDetail collection={collection} />;
 };
 
-export function generateStaticParams() {
-  return collections.map(({ slug }) => ({ slug }));
-}
-
 export default CollectionDetailPage;

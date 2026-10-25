@@ -1,7 +1,17 @@
+import { Photos } from '@/types/types';
 import PhotoCard from './PhotoCard';
-import { collections } from '../../../data/collections';
 
-const CollectionsGallery = () => {
+type CollectionsPropsType = {
+  photos: Photos[];
+  loading: boolean;
+  error: string;
+};
+
+const CollectionsGallery = ({
+  photos,
+  loading,
+  error,
+}: CollectionsPropsType) => {
   return (
     <section className="bg-black px-6 py-24 text-white sm:py-32">
       <div className="max-w-7xl mx-auto">
@@ -18,9 +28,11 @@ const CollectionsGallery = () => {
         </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {collections.map((collection) => (
-            <PhotoCard key={collection.title} {...collection} />
-          ))}
+          {/* {loading && <div className="text-white">Please wait...</div>} */}
+          {error && <div className="text-red-500">{error}</div>}
+          {loading
+            ? 'please wait...'
+            : photos.map((photo) => <PhotoCard key={photo.id} {...photo} />)}
         </div>
       </div>
     </section>
