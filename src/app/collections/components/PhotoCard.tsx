@@ -2,10 +2,10 @@ import { Photos } from '@/types/types';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const PhotoCard = ({ slug, alt_description, urls }: Photos) => {
+const PhotoCard = ({ id, alt_description, urls }: Photos) => {
   return (
     <Link
-      href={`/collections/${slug}`}
+      href={`/collections/${id}`}
       className="group block overflow-hidden bg-neutral-900"
     >
       <div className="relative aspect-[4/5] overflow-hidden bg-neutral-800">

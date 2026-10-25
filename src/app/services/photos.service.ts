@@ -22,3 +22,15 @@ export const getPhotos = async ({
     throw new Error('Failed to fetch photos');
   }
 };
+
+export const getPhoto = async (id: string): Promise<Photos> => {
+  try {
+    const response = await axios.get(`/api/photos/${id}`);
+    return response.data;
+  } catch (error) {
+    if (axios.isAxiosError<ApiMessageResponse>(error)) {
+      throw new Error(error.response?.data?.message ?? 'Unplash API Error');
+    }
+    throw new Error('Failed to fetch photos');
+  }
+};
