@@ -3,7 +3,7 @@ import HeroSection from '@/app/(home)/components/Hero';
 import PhotoJournal from '@/app/(home)/components/PhotoJournal';
 import FeatureWork from './components/FeatureWork';
 
-export default function Home() {
+const Home = () => {
   return (
     <main>
       <HeroSection />
@@ -12,4 +12,6 @@ export default function Home() {
       <CreativeVision />
     </main>
   );
-}
+};
+
+export default Home;
