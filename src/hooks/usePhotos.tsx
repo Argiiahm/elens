@@ -15,11 +15,7 @@ const usePhotos = () => {
   const [photos, setPhotos] = useState<Photos[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
   const page = Math.max(1, Number(searchParams.get('page')) || 1);
-  const [pagination, setPagination] = useState({
-    page: 1,
-  });
 
   const fetchPhotos = useCallback(async () => {
     try {
