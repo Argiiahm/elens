@@ -27,7 +27,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-neutral-300 leading-relaxed mb-9">
-            We capture life's most meaningful moments through timeless
+            We capture life most meaningful moments through timeless
             photography. From portraits and weddings to fashion and events,
             every frame tells a unique story filled with emotion, beauty, and
             authenticity.

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Navlink from '../Navlink';
 import MobileNav from './MobileNav';
 import { MedsosLists, Menus } from '@/config/Menu';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
 import { usePathname } from 'next/navigation';
 

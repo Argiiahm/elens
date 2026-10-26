@@ -5,7 +5,7 @@ import { BiSearch } from 'react-icons/bi';
 
 type InputTypes = {
   type: string;
-  handleSearch: any;
+  handleSearch: (e: React.FormEvent<HTMLFormElement>) => void;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
