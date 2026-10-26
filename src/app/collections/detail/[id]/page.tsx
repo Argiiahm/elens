@@ -1,6 +1,6 @@
 'use client';
 
-import CollectionDetail from '../components/CollectionDetail';
+import CollectionDetail from '../../components/CollectionDetail';
 import { notFound, useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { getPhoto } from '@/app/services/photos.service';

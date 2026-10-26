@@ -5,7 +5,7 @@ import Link from 'next/link';
 const PhotoCard = ({ id, alt_description, urls }: Photos) => {
   return (
     <Link
-      href={`/collections/${id}`}
+      href={`/collections/detail/${id}`}
       className="group block overflow-hidden bg-neutral-900"
     >
       <div className="relative aspect-[4/5] overflow-hidden bg-neutral-800">
